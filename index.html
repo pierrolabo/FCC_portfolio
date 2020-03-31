@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>My Portfolio</title>
   </head>
   <body>
-    <header>
-      <div class="topbar"></div>
-    </header>
-    <nav class="sideNav">
+    <nav class="sideNav" id="navbar">
       <div class="logo">
         <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user" />
+      </div>
+      <div class="logo-title">
+        <span>Miguel Sanchez</span>
       </div>
       <div class="social-icons">
         <a href="#" target="_blank"></a>Linkedin</a>
@@ -27,11 +31,24 @@
         <li><a href="#contact">Connect</a></li>
       </ul>
     </nav>
-
     <!-- Main Content-->
+    <div class="main-content">
+      <header>
+        <div class="header-content">
+          <button id="toggle" class="toggle">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+          <nav class="topbar">
+            <a id="profile-link" target="_blank" href="http://www.freecodecamp.com/"></a>
+            <ul>
+              <li></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
     <main>
       <section id="welcome-section" class="welcome-section">
-        <h1 class="main-title">Pierre-Emmanuel Labro</h1>
+        <h1 class="main-title">Miguel Sanchez</h1>
         <!--Text to defin-->
         <h3 class="secondary-title">Lorem, ipsum dolor.</h3>
       </section>
@@ -68,7 +85,7 @@
         <h2>Some of my latest projects</h2>
         <article class="portfolio-content">
           <div class="portfolio-grid">
-            <a href="" class="project project-card" target="_blank"></a>
+            <a href="" class="project project-card project-tile" target="_blank"></a>
             <a href="" class="project project-card" target="_blank"></a>
             <a href="" class="project project-card" target="_blank"></a>
           </div>
@@ -152,5 +169,12 @@
           </p>
       </footer>
     </main>
+
+    </div>
   </body>
+  <script src="script.js"></script>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
 </html>
