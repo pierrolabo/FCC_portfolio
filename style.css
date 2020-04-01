@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 :root {
   --primary-color: #30336b;
   --secondary-color: #be2edd;
   --sideBar-width: 240px;
+  --presentation-title_color: turquoise;
 }
 
 * {
@@ -12,6 +15,8 @@ body {
   margin: 0;
   display: flex;
   transition: transform 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
 }
 
 /*  Animate the sidebar  */
@@ -20,9 +25,9 @@ body.show-nav {
 }
 
 header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   padding: 40px 15px;
-  border: 1px solid purple;
 }
 
 /* SideNav Button */
@@ -30,7 +35,6 @@ header {
   position: fixed;
   top: 20px;
   left: 20px;
-
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -118,9 +122,6 @@ button {
   width: 100%;
 }
 
-header {
-  border: 3px solid purple;
-}
 main {
   display: flex;
   flex-direction: column;
@@ -132,6 +133,7 @@ section {
   display: flex;
   flex-direction: column;
   border: 1px solid green;
+  color: black;
   width: 100%;
 }
 
@@ -141,14 +143,99 @@ section h2 {
   align-items: center;
 }
 
-.welcome-section {
-  justify-content: center;
-  align-items: center;
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
   height: 100vh;
+  width: 100%;
+  z-index: -1;
 }
 
-@media (max-width: 300px) {
+.background img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.welcome-section {
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.welcome-section .presentation-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: presentationText-animate 1.8s ease-in;
+  opacity: 1;
+}
+
+@keyframes presentationText-animate {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+.presentation-text .presentation-title {
+  margin: 0;
+  padding: 0;
+  color: var(--presentation-title_color);
+  font-size: 25px;
+}
+.presentation-text .presentation-description {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.welcome-section .main-title {
+  margin-top: 130px;
+  font-size: 52px;
+  line-height: 3.9rem;
+  padding: 12px;
+  color: #fff;
+  animation: title-animate 1.3s ease;
+}
+@keyframes title-animate {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*  Profile Section */
+.profile-section {
+  background: #082159;
+}
+
+.profile-section article {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px) {
   header {
     background: purple;
   }
+  /*
+  .background img {
+    height: 100%;
+    width: 100%;
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    z-index: -1;
+  }
+  */
 }
