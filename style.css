@@ -11,6 +11,19 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 38px;
+}
 body {
   margin: 0;
   display: flex;
@@ -90,8 +103,6 @@ nav.topbar ul {
   margin: 0;
   margin-right: 120px;
   padding: 0;
-
-  list-style: none;
 }
 
 nav.topbar ul li {
@@ -159,7 +170,6 @@ nav.topbar ul li a {
 .social-icons ul li {
   display: block;
   flex-shrink: 1;
-  list-style: none;
   font-size: 14px;
   background-color: transparent;
   color: #000;
@@ -228,7 +238,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
   color: black;
   width: 100%;
   height: 100vh;
@@ -375,10 +384,107 @@ section h2 {
   color: #fff;
   font-size: 26px;
 }
+.profile-section article input:hover {
+  cursor: pointer;
+}
 @media (max-width: 900px) {
   .profile-section article input {
     width: 50%;
   }
+}
+/*    ---------------------------------------------   */
+
+/*    Projects section    */
+
+.project-section {
+  color: #fff;
+  justify-content: space-between;
+}
+
+.project-section .project {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 56px;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.project-section .project-image {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+@media (max-width: 600px) {
+  .project-section .project-image {
+    display: none;
+  }
+}
+
+.project-section .project-image img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.project-section .project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.project-content-heading h4 {
+  font-size: 34px;
+  padding-left: 8px;
+}
+.project-content-badges {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: -30px;
+  padding-left: 8px;
+  width: 100%;
+}
+.project-content-badges li {
+  margin-right: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid lightgrey;
+  background: lightgrey;
+  color: black;
+
+  font-size: 12px;
+}
+
+.project-content-details {
+  width: 100%;
+}
+.project-content-details li {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 12px;
+}
+.project-content-details li span {
+  justify-content: baseline;
+  padding-top: 4px;
+
+  line-height: 1.34;
+  font-size: 16px;
+}
+
+.project-content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 12px 0;
+}
+.project-content-tags li {
+  display: flex;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--secondary-color);
 }
 @media (max-width: 600px) {
   header {
