@@ -226,6 +226,8 @@ main {
 section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid green;
   color: black;
   width: 100%;
@@ -291,8 +293,12 @@ section h2 {
   }
 }
 
+.profile-section {
+  background: #262956;
+}
 .profile-section article {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -304,30 +310,35 @@ section h2 {
 
 .profile-section .profile-image {
   text-align: center;
-
-  margin: 22px 0;
 }
 .profile-section .profile-image img {
-  height: 240px;
-  width: 240px;
+  height: 358px;
+  width: 358px;
   border-radius: 50%;
 }
 
+.profile-section .profile-content {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .profile-section article ul {
   list-style: none;
   margin: 0;
-  padding: 50px 0;
+  padding: 20px 0;
+  margin-right: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: 1px solid black;
+
+  color: #fff;
 }
 
 .profile-section article ul li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 12px 0;
   width: 100%;
   height: 42px;
@@ -335,33 +346,42 @@ section h2 {
 
 .profile-section article ul li label {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 50%;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 12px;
 }
 
 .profile-section article ul li .value {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
+  padding-left: 12px;
   font-size: 22px;
   border-left: 1px solid purple;
+}
+
+.profile-section article input {
+  margin: 4px auto;
+  padding: 8px;
+  width: 10%;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 26px;
+}
+@media (max-width: 900px) {
+  .profile-section article input {
+    width: 50%;
+  }
 }
 @media (max-width: 600px) {
   header {
     background: purple;
   }
-  /*
-  .background img {
-    height: 100%;
-    width: 100%;
-    background-position: left;
-    background-attachment: fixed;
-    background-repeat: repeat;
-    z-index: -1;
-  }
-  */
 }
