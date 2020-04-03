@@ -33,11 +33,6 @@ body {
   background: #082159;
 }
 
-/*  Animate the sidebar  */
-body.show-nav {
-  transform: translateX(200px);
-}
-
 .background {
   position: absolute;
   top: 0;
@@ -72,8 +67,12 @@ header {
   top: 20px;
   left: 20px;
   background-color: rgba(0, 0, 0, 0.3);
+  transition: left 0.9s;
 }
 
+.open-button {
+  left: 220px;
+}
 button {
   border: 0;
   border-radius: 5px;
@@ -121,6 +120,7 @@ nav.topbar ul li a {
 }
 
 /*  Sidebar */
+
 .sideNav {
   position: fixed;
   top: 0;
@@ -134,8 +134,20 @@ nav.topbar ul li a {
 
   background-color: #082159;
   color: #fff;
-  transform: translateX(-100%);
+  z-index: 40;
+  margin-left: -200px;
+  /*
+  transform: translateX(-100%);*/
   /* display: none; */
+}
+/*  Animate the sidebar  */
+.show-nav {
+  margin-left: 0;
+  transition: margin-left 0.8s;
+}
+.close-nav {
+  margin-left: -200px;
+  transition: margin-left 0.8s;
 }
 
 /* SideNav img */
