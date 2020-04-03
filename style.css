@@ -553,9 +553,3 @@ footer p {
 footer a {
   color: #fff;
 }
-
-@media (max-width: 600px) {
-  header {
-    background: purple;
-  }
-}
