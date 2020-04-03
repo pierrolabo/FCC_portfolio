@@ -248,6 +248,11 @@ section {
   height: 100vh;
 }
 
+@media (max-width: 400px) {
+  section {
+    padding: 26px 16px;
+  }
+}
 section h2 {
   display: flex;
   justify-content: center;
@@ -297,6 +302,12 @@ section h2 {
   padding: 12px;
   color: #fff;
   animation: title-animate 1.3s ease;
+}
+
+@media (max-width: 400px) {
+  .welcome-section .main-title {
+    padding: 70px;
+  }
 }
 @keyframes title-animate {
   0% {
@@ -406,6 +417,11 @@ section h2 {
   justify-content: space-between;
 }
 
+@media (max-width: 400px) {
+  .project-section {
+    height: 120vh;
+  }
+}
 .project-section .project {
   display: flex;
   flex-direction: row-reverse;
@@ -503,6 +519,11 @@ section h2 {
   height: 150vh;
 }
 
+@media (max-width: 400px) {
+  .technology-section {
+    height: 180vh;
+  }
+}
 .technology-section h2 {
   width: 100%;
   font-size: 48px;
@@ -552,4 +573,10 @@ footer p {
 }
 footer a {
   color: #fff;
+}
+
+@media (max-width: 400px) {
+  footer p {
+    margin: 0 22px;
+  }
 }
